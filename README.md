@@ -1,2 +1,2 @@
 # pygmaps
-My extension to pygmaps to add title.
+My extension to pygmaps to add an option to add a title to a point.

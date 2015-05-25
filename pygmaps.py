@@ -191,7 +191,7 @@ class maps:
         f.write('\n\n')
 
 if __name__ == "__main__":
-    ########## CONSTRUCTOR: pygmaps(latitude, longitude, zoom) ##############################
+    ########## CONSTRUCTOR: maps(latitude, longitude, zoom) #################################
     # DESC:		initialize a map  with latitude and longitude of center point
     #		and map zoom level "15"
     # PARAMETER1:	latitude (float) latittude of map center point
@@ -199,7 +199,7 @@ if __name__ == "__main__":
     # PARAMETER3:	zoom (int)  map zoom level 0~20
     # RETURN:	the instant of pygmaps
     #========================================================================================
-    mymap = pygmaps(37.428, -122.145, 16)
+    mymap = maps(37.428, -122.145, 16)
 
     ########## FUNCTION: setgrids(start-Lat, end-Lat, Lat-interval, start-Lng, end-Lng, Lng-interval) ######
     # DESC:		set grids on map
@@ -213,16 +213,17 @@ if __name__ == "__main__":
     #========================================================================================
     mymap.setgrids(37.42, 37.43, 0.001, -122.15, -122.14, 0.001)
 
-    ########## FUNCTION:  addpoint(latitude, longitude, [color])#############################
+    ########## FUNCTION:  addpoint(latitude, longitude, [color], [title])####################
     # DESC:		add a point into a map and dispaly it, color is optional default is red
     # PARAMETER1:	latitude (float) latitude of the point
     # PARAMETER2:	longitude (float) longitude of the point
     # PARAMETER3:	color (string) color of the point showed in map, using HTML color code
     #		HTML COLOR CODE:  http://www.computerhope.com/htmcolor.htm
     #		e.g. red "#FF0000", Blue "#0000FF", Green "#00FF00"
+    # PARAMETER4:   title (string) for point
     # RETURN:	no return
     #========================================================================================
-    mymap.addpoint(37.427, -122.145, "#0000FF")
+    mymap.addpoint(37.427, -122.145, "#0000FF", "Title test")
 
     ########## FUNCTION:  addradpoint(latitude, longitude, radius, [color])##################
     # DESC: 	add a point with a radius (Meter) - Draw cycle
